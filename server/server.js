@@ -1,5 +1,4 @@
 import express from 'express'
-import http from 'http'
 import cookieParser from 'cookie-parser'
 import favicon from 'serve-favicon'
 import io from 'socket.io'
@@ -12,7 +11,6 @@ import Html from '../client/html'
 const { resolve } = require('path')
 
 const server = express()
-const httpServer = http.createServer(server)
 
 const PORT = config.port
 
@@ -69,6 +67,6 @@ server.use('/api/', (req, res) => {
   res.end()
 })
 
-httpServer.listen(PORT)
+server.listen(PORT)
 
 console.log(`Serving at http://localhost:${PORT}`)

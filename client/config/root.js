@@ -6,7 +6,6 @@ import { Provider, useSelector } from 'react-redux'
 import store, { history } from '../redux'
 
 import Startup from './startup'
-
 import Main from '../components/main'
 
 const OnlyAnonymousRoute = ({ component: Component, ...rest }) => {
